@@ -31,7 +31,7 @@ export default {
     };
   },
   methods: {
-    createRecipe: function () {
+    createPost: function () {
       axios
         .post("/posts", this.newPostParams)
         .then((response) => {
