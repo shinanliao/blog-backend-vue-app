@@ -1,11 +1,11 @@
 <template>
   <div class="posts-index">
     <div v-for="post in posts" v-bind:key="post.id">
-      <p>Title: {{ post.title }}</p>
+      <h3>Title: {{ post.title }}</h3>
+      <img :src="post.image" alt="" />
       <p>Body: {{ post.body }}</p>
-      <router-link :to="`/posts/${post.id}`">
-        <img :src="post.image" alt="" />
-      </router-link>
+      <router-link :to="`/posts/${post.id}`">More Information</router-link>
+      <br />
     </div>
   </div>
 </template>
