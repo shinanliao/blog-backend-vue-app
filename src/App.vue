@@ -17,6 +17,11 @@
       |
       <router-link to="/posts/new">New Post</router-link>
     </div>
+    <div v-if="flashMessage">
+      {{ flashMessage }}
+      <br />
+      <button v-on:click="flashMessage = ''">Dismiss</button>
+    </div>
     <router-view />
   </div>
 </template>
@@ -47,7 +52,9 @@
 <script>
 export default {
   data: function () {
-    return {};
+    return {
+      flashMessage: "",
+    };
   },
 
   created: function () {},
